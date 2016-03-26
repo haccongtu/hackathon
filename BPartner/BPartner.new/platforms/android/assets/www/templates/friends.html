@@ -1,0 +1,13 @@
+﻿<ion-view view-title="Bạn bè">
+    <ion-pane>
+        <ion-content>
+            <div class="list">
+                <a class="item item-avatar" ng-click="sendMessage(p.$id)" ng-repeat="p in profiles" ng-if="p.email !== user.email">
+                    <img src="{{'img/avatar/'+p.avatar + '.jpg'}}">
+                    <h2>{{p.name}}</h2>
+                    <p class="subdued">.......................................</p>
+                </a>
+            </div>
+        </ion-content>
+    </ion-pane>
+</ion-view>
