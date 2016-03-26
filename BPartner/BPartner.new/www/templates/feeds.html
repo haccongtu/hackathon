@@ -1,19 +1,17 @@
 ﻿<ion-view view-title="Thông tin mới">
     <ion-content>
 
-        <div class="card">
-
-            <div class="item item-avatar">
-                <img src="https://upload.wikimedia.org/wikipedia/en/8/86/Avatar_Aang.png">
-                <button class="button button-clear button-dark">
-                    Bạn đang nghĩ gì ?
-                </button>
+        <div class="row">
+            <div class="col">
+                <button class="button button-icon icon ion-compose"> Đăng bài</button>
             </div>
-
+            <div class="col">
+                <button class="button button-icon icon ion-android-search">Tìm kiếm</button>
+            </div>
         </div>
 
         <div class="list" ng-repeat="feed in cachedFeeds">
-            <div class="list card">
+            <div class="card">
 
                 <div class="item item-avatar">
                     <img src="{{feed.sender.avatar}}">
@@ -24,9 +22,6 @@
                 <div class="item item-body" style="margin-top: -40px">
 
                     <p>{{feed.status}}</p>
-
-                    <!-- map -->
-
                     <p>
                         <i class="icon ion-map" style="color: darkgreen"> Bản đồ</i>
                         <i class="icon ion-calendar" style="color: darkgreen"> Lịch</i>
