@@ -58,7 +58,8 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         url: '/feeds',
         views: {
             'homeContent': {
-                templateUrl: 'templates/feeds.html'
+                templateUrl: 'templates/feeds.html',
+                controller: 'feedCtrl'
             }
         }
     })
