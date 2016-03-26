@@ -1,31 +1,25 @@
 ﻿
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/1.2.4/css/ionic.min.css">
-	</head>
-	<body>
-		<div class="bar bar-subheader bar-stable static text-center">
-            <strong class="title">Trang đăng nhập</strong>
+<ion-view view-title="Ionic Components+">
+    <ion-content>
+        <form ng-submit="login()">
             <div class="list">
-  <label class="item item-input item-floating-label">
-    <span class="input-label">Tài khoản</span>
-    <input type="text" placeholder="First Name">
-  </label>
-  <label class="item item-input item-floating-label">
-    <span class="input-label">Mật khẩu</span>
-    <input type="text" placeholder="Last Name">
-  </label>
-  <button class="button button-light">
-  Đăng nhập
-</button>
-</div>
-        </div>
-	</body>
-	<script src="http://code.ionicframework.com/1.2.4/js/ionic-angular.min.js"></script>
-	<script src="http://code.ionicframework.com/1.2.4/js/ionic.min.js"></script>
-</html>
-</!DOCTYPE>
-
-
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Email</span>
+                    <input type="email" placeholder="Email" ng-model="user.email" required>
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Mật khẩu</span>
+                    <input type="password" placeholder="Mật khẩu">
+                </label>
+            </div>
+            <div class="row">
+                <button class="col button button-positive  button-small" type="submit">
+                    Đăng nhập
+                </button>
+                <button class="col button button-stable  button-small" ui-sref="app.signup">
+                    Đăng ký
+                </button>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>
