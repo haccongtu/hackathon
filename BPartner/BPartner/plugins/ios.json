@@ -7,22 +7,22 @@
         "files": {}
     },
     "installed_plugins": {
-        "cordova-plugin-console": {
-            "PACKAGE_NAME": "com.notfound.bpartner"
-        },
         "cordova-plugin-device": {
             "PACKAGE_NAME": "com.notfound.bpartner"
         },
-        "cordova-plugin-geolocation": {
-            "PACKAGE_NAME": "com.notfound.bpartner"
-        },
-        "cordova-plugin-statusbar": {
+        "cordova-plugin-console": {
             "PACKAGE_NAME": "com.notfound.bpartner"
         },
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.notfound.bpartner"
         },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.notfound.bpartner"
+        },
         "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.notfound.bpartner"
+        },
+        "cordova-plugin-geolocation": {
             "PACKAGE_NAME": "com.notfound.bpartner"
         }
     },

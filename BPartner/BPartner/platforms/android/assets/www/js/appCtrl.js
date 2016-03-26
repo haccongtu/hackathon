@@ -9,6 +9,7 @@
         $scope.logined = AuthService.logined;
         $rootScope.$on('authInfoChanged', function (event, data) {
             $scope.logined = AuthService.logined;
+            $scope.user = AuthService.user;
             $scope.$apply();
         });
     }

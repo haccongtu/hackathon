@@ -1,4 +1,4 @@
-(function webpackUniversalModuleDefinition(root, factory) {
+﻿(function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory((function webpackLoadOptionalExternalModule() { try { return require("angular"); } catch(e) {} }()));
 	else if(typeof define === 'function' && define.amd)

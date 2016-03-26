@@ -10,6 +10,7 @@
     function AuthService($rootScope,$q, $state, $timeout, $ionicHistory) {
         var service = {
             user: {},
+            id: {},
             logined: false,
             login: login,
             register: register
@@ -18,6 +19,7 @@
         function login(user) {
             var ref = new Firebase(fire + "profiles");
             ref.orderByChild("email").equalTo(user.email).on("child_added", function (snapshot) {
+                service.id = snapshot.key();
                 service.user = snapshot.val();
                 service.logined = true;
                 $ionicHistory.nextViewOptions({

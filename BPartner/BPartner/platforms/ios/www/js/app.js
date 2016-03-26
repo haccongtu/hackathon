@@ -58,8 +58,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         url: '/feeds',
         views: {
             'homeContent': {
-                templateUrl: 'templates/feeds.html',
-                controller: 'feedCtrl'
+                templateUrl: 'templates/feeds.html'
             }
         }
     })
@@ -67,18 +66,20 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         url: '/messages',
         views: {
             'homeContent': {
-                templateUrl: 'templates/messages.html'
+                templateUrl: 'templates/messages.html',
+                controller: 'messageCtrl'
             }
         }
     })
-     .state('app.home.friends', {
-         url: '/friends',
-         views: {
-             'homeContent': {
-                 templateUrl: 'templates/friends.html'
-             }
-         }
-     })
+    .state('app.home.friends', {
+        url: '/friends',
+        views: {
+            'homeContent': {
+                templateUrl: 'templates/friends.html',
+                controller: 'friendCtrl'
+            }
+        }
+    })
     .state('app.profile', {
         url: '/profile',
         views: {
