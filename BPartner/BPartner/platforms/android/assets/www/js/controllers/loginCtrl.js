@@ -6,7 +6,7 @@
         .controller('loginCtrl', loginCtrl);
     loginCtrl.$inject = ['$scope', 'AuthService'];
     function loginCtrl($scope, AuthService) {
-        var user = {};
+        var user = { email: 'minhducle.1995@outlook.com', password: '' };
 
         $scope.login = login;
         $scope.user = user;
