@@ -1,8 +1,13 @@
-﻿
-<ion-view view-title="Ionic Components+">
-    <ion-content>
-        <div class="bar bar-subheader bar-stable static text-center">
-            <strong class="title">Trang tin nhắn</strong>
-        </div>
-    </ion-content>
+﻿<ion-view view-title="Tin nhắn">
+    <ion-pane>
+        <ion-content>
+            <div class="list">
+                <a class="item item-avatar" href="#" ng-repeat="p in profiles" ng-if="p.email !== user.email">
+                    <img ng-src="p.cover">
+                    <h2>{{p.name}}</h2>
+                    <p class="subdued">c</p>
+                </a>
+            </div>
+        </ion-content>
+    </ion-pane>
 </ion-view>

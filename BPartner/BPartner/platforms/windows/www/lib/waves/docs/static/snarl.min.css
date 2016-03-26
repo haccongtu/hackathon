@@ -1,4 +1,4 @@
-/*!
+﻿/*!
  * Snarl - Web Notifications based on Growl
  * @version v0.1.3
  * @link https://hoxxep.github.io/snarl

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Ionic Material
  * "Bundle Index" / "Entryfile"
  * https://github.com/zachsoft/ionic-material
