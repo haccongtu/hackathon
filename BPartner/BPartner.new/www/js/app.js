@@ -63,10 +63,10 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             }
         }
     })
-    .state('app.home.newfeed', {
+    .state('app.newfeed', {
         url: '/newfeed',
         views: {
-            'homeContent': {
+            'menuContent': {
                 templateUrl: 'templates/newfeed.html',
                 controller: 'newFeedCtrl'
             }

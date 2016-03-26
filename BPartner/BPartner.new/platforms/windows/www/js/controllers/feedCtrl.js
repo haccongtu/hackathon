@@ -23,7 +23,6 @@
             if (ind + 10 >= $scope.buffer.length) {
                 r = $scope.buffer.length - ind
             }
-            console.log("Loading")
             $scope.cachedFeeds = $scope.cachedFeeds.concat($scope.buffer.slice(ind, r + ind))
         }
         $scope.press = function (item) {

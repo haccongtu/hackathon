@@ -21,6 +21,9 @@
         },
         "ionic-plugin-keyboard": {
             "PACKAGE_NAME": "ionic-sidemenu"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "ionic-sidemenu"
         }
     },
     "dependent_plugins": {}

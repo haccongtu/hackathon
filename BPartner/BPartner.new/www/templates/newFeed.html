@@ -1,36 +1,36 @@
 ﻿<ion-view view-title="Đăng bài mới">
-
-    <ion-content>
-
-        <div class="row">
-            <div class="col">
-                <img src="http://pik.vn/20152aebbf0d-aea7-457d-8af4-7699a082426a.jpeg" width="50px">
-            </div>
-            <div class="col-90">
-                <div class="list list-inset">
-                    <label class="item item-input">
-                        <textarea placeholder="Cùng chia sẻ nào!"></textarea>
-                    </label>
+    <ion-content style="overflow:hidden">
+        <form ng-submit="addStatus()">
+            <div class="row">
+                <div class="col">
+                    <img src="http://pik.vn/20152aebbf0d-aea7-457d-8af4-7699a082426a.jpeg" width="50">
+                </div>
+                <div class="col-90">
+                    <div class="list list-inset">
+                        <label class="item item-input">
+                            <textarea placeholder="Cùng chia sẻ nào!" ng-model="vm.content"></textarea>
+                        </label>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="list list-inset">
-            <label class="item item-input">
-                <i class="icon ion-android-locate placeholder-icon"></i>
-                <input type="text" placeholder="Điểm xuất phát">
-            </label>
-        </div>
-        
-        <div class="list list-inset">
-            <label class="item item-input">
-                <i class="icon ion-android-pin placeholder-icon"></i>
-                <input type="text" placeholder="Điểm đến">
-            </label>
-        </div>
+            <div class="list list-inset">
+                <label class="item item-input">
+                    <i class="icon ion-android-locate placeholder-icon"></i>
+                    <input ng-focus="hfocus(1)" ng-model="vm.start.address" type="text" placeholder="Điểm xuất phát">
+                </label>
+            </div>
 
-        <button class="button button-full button-small button-balanced">Đăng</button>
+            <div class="list list-inset">
+                <label class="item item-input">
+                    <i class="icon ion-android-pin placeholder-icon"></i>
+                    <input ng-focus="hfocus(2)" ng-model="vm.end.address" type="text" placeholder="Điểm đến">
+                </label>
+            </div>
 
+            <button class="button button-full button-small button-balanced" type="submit">Đăng</button>
+        </form>
+        <div id="map" data-tap-disabled="true"></div>
     </ion-content>
 
 </ion-view>
