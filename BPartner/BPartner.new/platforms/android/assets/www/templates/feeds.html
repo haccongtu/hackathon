@@ -1,35 +1,35 @@
 ﻿<ion-view view-title="Thông tin mới">
-    <ion-content>
+    
+    <ion-content style="overflow: hidden">
 
         <div class="row">
             <div class="col">
-                <button class="button button-full button-icon icon ion-compose  button-small" ui-sref="app.home.newfeed"> Đăng bài</button>
+                <button class="button button-full button-icon icon ion-compose button-small" ui-sref="app.home.newfeed"> Đăng bài</button>
             </div>
             <div class="col">
-                <button class="button  button-full button-icon icon ion-android-search button-small">Tìm kiếm</button>
+                <button class="button button-full button-icon icon ion-android-search button-small">Tìm kiếm</button>
             </div>
         </div>
 
-        <div class="list" ng-repeat="feed in cachedFeeds">
-            <div class="card">
+        <div style="max-height: 100%; padding-bottom: 130px; overflow-y: auto; margin-right: -15px">
+            <div class="list" ng-repeat="feed in cachedFeeds">
+                <div class="card">
 
-                <div class="item item-avatar">
-                    <img src="{{feed.sender.avatar}}">
-                    <h2>{{feed.sender.name}}</h2>
-                    <p>{{feed.time}}</p>
-                </div>
+                    <div class="item item-avatar">
+                        <img src="{{feed.sender.avatar}}">
+                        <h2>{{feed.sender.name}}</h2>
+                        <p>{{feed.time}}</p>
+                    </div>
 
-                <div class="item item-body" style="margin-top: -40px">
+                    <div class="item item-body" style="margin-top: -40px">
 
-                    <p>{{feed.status}}</p>
-                    <p>
-                        <i class="icon ion-map" style="color: darkgreen"> Bản đồ</i>
-                        <i class="icon ion-calendar" style="color: darkgreen"> Lịch</i>
-                    </p>
-                    <button class="button  button-full button-outline button-balanced">{{feed.commentCount}} Comment</button>
+                        <p>{{feed.status}}</p>
+                        <a class="icon">{{feed.commentCount}} Comment</a>
+                    </div>
                 </div>
             </div>
         </div>
 
     </ion-content>
 </ion-view>
+
