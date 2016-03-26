@@ -9,10 +9,9 @@
 
     function ProfileService($firebaseArray) {
         var service = {};
-
-        var firebaseObj = new Firebase(firebaseUrl + 'profiles');
+        var firebaseObj = new Firebase(fire + 'profiles');
         var syncObj = $firebaseArray(firebaseObj);
-        services.profiles = syncObj;
-        return services;
+        service.profiles = syncObj;
+        return service;
     }
 })();

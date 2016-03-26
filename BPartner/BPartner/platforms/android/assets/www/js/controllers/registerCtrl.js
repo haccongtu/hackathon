@@ -12,12 +12,13 @@
         $scope.register = register;
         $scope.user = user;
 
-        function register() {
+        function register() {             //đăng ký giả
             var firebaseObj = new Firebase(fire + 'profiles');
             var newProfile = firebaseObj.push();
             newProfile.set({
                 'email': $scope.user.email,
-                'name': $scope.user.name
+                'name': $scope.user.name,
+                'avatar': Math.floor(Math.random() *10)    //avatar ngẫu nhiên có sẵn để đơn giản
             }, function () {
                 $state.go('app.login');
             });

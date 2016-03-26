@@ -13,7 +13,7 @@
 
         function login() {
             if ($scope.user.email) {
-                AuthService.login(user);
+                AuthService.login(user);   //đăng nhập giả
             }
         }
     }
