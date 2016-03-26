@@ -9,7 +9,8 @@
     function FeedService() {
 
         var feedTemp = [];
-        var senderTemp = { id: 1, name: 'Nguyễn văn A', avatar: 'http://www.app.iflipd.com/images/avatar.jpg'};
+        var senderTemp = { id: 1, name: 'Nguyễn văn A', avatar: 'http://www.app.iflipd.com/images/avatar.jpg' };
+        
         var services = {};
         for (var i = 1; i < 50; i++) {
             feedTemp.push({
