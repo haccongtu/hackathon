@@ -1,19 +1,23 @@
-﻿<ion-header-bar class="bar-positive">
-    <h1 class="title">Tin Nhắn</h1>
-</ion-header-bar>
+﻿<ion-view view-title="Hộp Thoại ">
+    <ion-content>
+        <ion-header-bar class="bar-positive">
+            <h1 class="title">Tin Nhắn</h1>
+        </ion-header-bar>
 
-<ion-content>
+        <ion-content>
 
-    <div class="list">
+            <div class="list">
 
-        <a ng-repeat="item in items"
-           class="item item-thumbnail-left">
+                <a ng-repeat="item in items"
+                   class="item item-thumbnail-left">
 
-            <img ng-src="item.image">
-            <h2>{{ item.sender }}</h2>
-            <h4>{{ item.content }}</h4>
-        </a>
+                    <img ng-src="item.image">
+                    <h2>{{ item.sender }}</h2>
+                    <h4>{{ item.content }}</h4>
+                </a>
 
-    </div>
+            </div>
 
-</ion-content> 
+        </ion-content>
+    </ion-content>
+</ion-view>
