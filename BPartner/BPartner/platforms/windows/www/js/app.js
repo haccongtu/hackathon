@@ -1,4 +1,4 @@
-﻿var app = angular.module('bpartner', ['ionic', 'ionic-material']);
+var app = angular.module('bpartner', ['ionic', 'ionic-material']);
 
 app.run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
@@ -21,11 +21,19 @@ app.config(function ($stateProvider, $urlRouterProvider) {
      })
     .state('app.login', {
         url: '/login',
-        templateUrl: 'templates/startup/login.html'
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/startup/login.html'
+            }
+        }
     })
     .state('app.signup', {
         url: '/register',
-        templateUrl: 'templates/startup/register.html'
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/startup/register.html'
+            }
+        }
     })
     .state('app.home', {
         url: '/home',
@@ -51,6 +59,30 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             }
         }
     })
+     .state('app.profile', {
+         url: '/profile',
+         views: {
+             'menuContent': {
+                 templateUrl: 'templates/profile.html'
+             }
+         }
+     })
+     .state('app.news', {
+         url: '/news',
+         views: {
+             'menuContent': {
+                 templateUrl: 'templates/news.html'
+             }
+         }
+     })
+     .state('app.settings', {
+         url: '/settings',
+         views: {
+             'menuContent': {
+                 templateUrl: 'templates/settings.html'
+             }
+         }
+     })
 
     $urlRouterProvider.otherwise('/app/login');
 });

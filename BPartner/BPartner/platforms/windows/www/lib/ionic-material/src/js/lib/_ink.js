@@ -1,4 +1,4 @@
-﻿'use strict';
+'use strict';
 
 /*!
  * Fork by Zach Fitzgerald and other contributors of Ionic Material
