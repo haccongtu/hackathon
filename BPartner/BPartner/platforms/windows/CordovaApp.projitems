@@ -8,7 +8,6 @@
   <ItemGroup>
     <Content Include="$(MSBuildThisFileDirectory)config.xml" />
     <Content Include="$(MSBuildThisFileDirectory)www\templates\chat\chat.html" />
-    <Content Include="$(MSBuildThisFileDirectory)www\templates\chat\managerchatting.html" />
     <Content Include="$(MSBuildThisFileDirectory)www\templates\chat\recent.html" />
   </ItemGroup>
   <Import Condition="Exists('$(MSBuildThisFileDirectory)CordovaAppDebug.projitems') And '$(Configuration)'=='Debug'" Project="CordovaAppDebug.projitems" />
