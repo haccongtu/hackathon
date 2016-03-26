@@ -6,13 +6,7 @@
             <ion-nav-buttons side="left">
                 <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
             </ion-nav-buttons>
-            <ion-nav-buttons side="right">
-                <button class="button button-icon button-clear ion-android-more-vertical" id="menu-popover" ng-click="popover.show($event)"></button>
-            </ion-nav-buttons>
         </ion-nav-bar>
-        <button id="fab" class="button button-positive button-fab button-fab-bottom-right">
-            <i class="icon ion-social-twitter"></i>
-        </button>
         <ion-nav-view name="menuContent"></ion-nav-view>
     </ion-side-menu-content>
     <ion-side-menu side="left">
@@ -23,13 +17,15 @@
             </div>
         </ion-header-bar>
         <ion-content class="stable-bg has-expanded-header">
-            <ion-list>
+            <ion-list ng-hide="logined">
                 <ion-item nav-clear menu-close ui-sref="app.login">
                     Đăng nhập
                 </ion-item>
                 <ion-item nav-clear menu-close ui-sref="app.signup">
                     Đăng ký
                 </ion-item>
+            </ion-list>
+            <ion-list ng-show="logined">
                 <ion-item nav-clear menu-close ui-sref="app.home">
                     Trang chính
                 </ion-item>
