@@ -10,9 +10,9 @@
     function ChatService($rootScope, $state) {
         var service = {};
 
-        service.sendMessage = sendMessage;
+        service.getConversation = getConversation;
 
-        function sendMessage(user1, user2) {
+        function getConversation(user1, user2) {
             var user1ConversationsRef = new Firebase(fire + 'profiles/' + user1 + '/conversations');
             var user2ConversationsRef = new Firebase(fire + 'profiles/' + user2 + '/conversations');
             var conversation = null;
@@ -22,7 +22,7 @@
                         user2Conversations.forEach(function (u2C) {
                             if (u1C.val().value == u2C.val().value) {
                                 conversation = new Firebase(fire + 'conversations/' + u1C.val().value);
-                            }
+                                                            }
                         });
                     });
                 });

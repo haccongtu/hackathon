@@ -1,22 +1,10 @@
 ﻿<ion-view view-title="Nhắn Tin">
     <ion-content class="content-stable" id="conversation">
-
-        <!--<div ng-class="{other: message.user.email != myEmail}"
-             class="messages">
-
-            <div class="message" ng-class="{'slide-right': hideTime, '': !hideTime}">
-                <span>{{ message.text }}</span>
-            </div>
-
-            <div class="time" ng-class="{'slide-right': hideTime, '': !hideTime}">{{message.time}}</div>
-
-
-        </div>-->
         <div ng-repeat="message in messages" class="card">
             <div class="row">
                 <img style="float:left; border-radius:100%;width:45px!important; height:45px !important ;padding: 2px" src="{{'img/avatar/' + message.user.avatar + '.jpg'}}">
                 <div style="width: auto;padding-left: 15px">
-                    <p style="max-width:40%;margin:0px"> <strong>{{message.text}}</strong></p>
+                    <p style="max-width:100%;margin:0px"> <strong>{{message.text}}</strong></p>
                     <span style="color: gray">{{message.time}}</span>
                 </div>
             </div>

@@ -19,7 +19,6 @@
             var ele = document.getElementById("conversation");
             ele.scrollTop = ele.scrollHeight;
         }
-        scrollTo();
         function addMessage() {
             conversation.push({ user: AuthService.user, time: (new Date()).getTime(), text: $scope.data.msg });
             $scope.data.msg = '';

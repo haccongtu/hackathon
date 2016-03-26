@@ -1,10 +1,10 @@
 ﻿(function () {
     'use strict';
     angular.module('controllers')
-    .controller('feedCtrl', feedCtrl);
+    .controller('newFeedCtrl', newFeedCtrl);
 
-    feedCtrl.$inject = ['$scope', 'FeedService'];
+    newFeedCtrl.$inject = ['$scope', 'FeedService'];
 
-    function feedCtrl($scope, FeedService) {
+    function newFeedCtrl($scope, FeedService) {
     }
 })();

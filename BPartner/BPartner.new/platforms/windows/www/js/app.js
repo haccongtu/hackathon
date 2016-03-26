@@ -59,10 +59,19 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         views: {
             'homeContent': {
                 templateUrl: 'templates/feeds.html',
-                controller:'feedCtrl'
+                controller: 'feedCtrl'
             }
         }
     })
+        .state('app.home.newfeed', {
+            url: '/newfeed',
+            views: {
+                'homeContent': {
+                    templateUrl: 'templates/newfeed.html',
+                    controller: 'newfeedCtrl'
+                }
+            }
+        })
     .state('app.home.messages', {
         url: '/messages',
         views: {
@@ -105,10 +114,11 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             }
         }
     }).state('app.conversation', {
-        url: '/conversation',
+        url: '/conversation/:user1/:user2',
         views: {
             'menuContent': {
-                templateUrl: 'templates/conversation.html'
+                templateUrl: 'templates/conversation.html',
+                controller: 'conversationCtrl'
             }
         }
     });
