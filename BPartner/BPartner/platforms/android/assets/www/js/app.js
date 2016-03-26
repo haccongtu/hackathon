@@ -14,19 +14,43 @@ app.run(function ($ionicPlatform) {
 app.config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
 
-    .state('app', {
-        url: '/app',
-        abstract: true,
-        templateUrl: 'templates/main.html'
+     .state('app', {
+         url: '/app',
+         abstract: true,
+         templateUrl: 'templates/main.html'
+     })
+    .state('app.login', {
+        url: '/login',
+        templateUrl: 'templates/startup/login.html'
     })
-    .state('app.components', {
-        url: '/components',
+    .state('app.signup', {
+        url: '/register',
+        templateUrl: 'templates/startup/register.html'
+    })
+    .state('app.home', {
+        url: '/home',
         views: {
             'menuContent': {
-                templateUrl: 'templates/components.html'
+                templateUrl: 'templates/home.html'
+            }
+        }
+    })
+    .state('app.messages', {
+        url: '/messages',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/messages.html'
+            }
+        }
+    })
+    .state('app.friends', {
+        url: '/friends',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/friends.html'
             }
         }
     })
 
-    $urlRouterProvider.otherwise('/app/components');
+    $urlRouterProvider.otherwise('/app/login');
 });

@@ -17,7 +17,7 @@
        under the License.
  */
 
-package com.ionicframework.ionicsidemenu;
+package com.notfound.bpartner;
 
 import android.os.Bundle;
 import org.apache.cordova.*;
