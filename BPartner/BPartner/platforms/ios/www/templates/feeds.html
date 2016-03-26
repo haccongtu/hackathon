@@ -1,0 +1,52 @@
+﻿<ion-view view-title="Ionic Components+">
+    <ion-content>
+        <div class="bar bar-subheader bar-stable static text-center">
+            <strong class="title">Trang feeds</strong>
+        </div>
+
+            <div class="list" ng-repeat="feed in cachedFeeds">
+                    <div class="card">
+                        <div class="item item-avatar">
+                            <img src="{{feed.sender.avatar}}">
+                            <h2>{{feed.sender.name}}</h2>
+                            <p>{{feed.time}}</p>
+                        </div>
+                        <div class="item item-body">
+                           
+                            <p>
+                                {{feed.status}}
+                            </p>
+                            <div class="row">
+                                <div class="col">
+                                    <button class="button button-small button-clear button-positive icon ion-map"></button>
+                                    
+                                </div>
+                                
+                                <div class="col">
+                                    <button class="button button-small button-clear button-positive icon ion-calendar"></button>
+                                    
+                                </div>
+
+
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <p style="color: darkgreen"> {{feed.percent}}%</p>
+                                </div>
+                                <div class="col col-40">
+                                    <button class="button button-clear button-dark">
+                                        Chi tiết
+                                    </button>
+                                </div>
+                                <div class="col col-40">
+                                    <button class="button button-clear button-dark">
+                                        {{feed.commentCount}} Comment
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+               
+            </div>
+    </ion-content>
+</ion-view>
