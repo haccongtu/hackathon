@@ -22,7 +22,7 @@
                         user2Conversations.forEach(function (u2C) {
                             if (u1C.val().value == u2C.val().value) {
                                 conversation = new Firebase(fire + 'conversations/' + u1C.val().value);
-                            }
+                                                            }
                         });
                     });
                 });
