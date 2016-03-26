@@ -1,16 +1,12 @@
-﻿
-<ion-view view-title="Tin nhắn">
-    <ion-content>
-
-        <div class="list">
-
-            <a class="item item-avatar" href="#">
-                <img src="../img/logo.png" />
-                <h2>Venkman</h2>
-                <p>Back off, man. I'm a scientist.</p>
-            </a>
-
-        </div>
-
-    </ion-content>
+﻿<ion-view view-title="Tin nhắn">
+    <ion-pane>
+        <ion-content>
+            <div class="list">
+                <a class="item item-avatar" ng-click="sendMessage(p.$id)" ng-repeat="p in conversations" ng-if="p.email !== user.email">
+                    <img src="{{'img/avatar/'+p.avatar + '.jpg'}}">
+                    <h2>{{p.name}}</h2>
+                </a>
+            </div>
+        </ion-content>
+    </ion-pane>
 </ion-view>

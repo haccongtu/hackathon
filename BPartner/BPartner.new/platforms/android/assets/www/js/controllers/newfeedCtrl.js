@@ -6,5 +6,6 @@
     newFeedCtrl.$inject = ['$scope', 'FeedService'];
 
     function newFeedCtrl($scope, FeedService) {
+
     }
 })();
