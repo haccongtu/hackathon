@@ -103,7 +103,14 @@ app.config(function ($stateProvider, $urlRouterProvider) {
                 templateUrl: 'templates/settings.html'
             }
         }
-    })
+    }).state('app.conversation', {
+        url: '/conversation',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/conversation.html'
+            }
+        }
+    });
 
     $urlRouterProvider.otherwise('/app/login');
 

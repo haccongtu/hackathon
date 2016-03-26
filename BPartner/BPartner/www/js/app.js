@@ -58,8 +58,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         url: '/feeds',
         views: {
             'homeContent': {
-                templateUrl: 'templates/feeds.html',
-                controller: 'feedCtrl'
+                templateUrl: 'templates/feeds.html'
             }
         }
     })
@@ -104,7 +103,14 @@ app.config(function ($stateProvider, $urlRouterProvider) {
                 templateUrl: 'templates/settings.html'
             }
         }
-    })
+    }).state('app.conversation', {
+        url: '/conversation',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/conversation.html'
+            }
+        }
+    });
 
     $urlRouterProvider.otherwise('/app/login');
 

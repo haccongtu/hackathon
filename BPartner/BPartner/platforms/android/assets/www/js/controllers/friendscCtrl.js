@@ -11,7 +11,7 @@
         $scope.sendMessage = sendMessage;
 
         function sendMessage(id) {
-            ChatService.sendMessage(AuthService.id, id);
+            $state.go('app.conversation', { user1: AuthService.id, user2: id });
         };
     }
 })();
