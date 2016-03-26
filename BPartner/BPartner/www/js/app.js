@@ -59,6 +59,30 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             }
         }
     })
+     .state('app.profile', {
+         url: '/profile',
+         views: {
+             'menuContent': {
+                 templateUrl: 'templates/profile.html'
+             }
+         }
+     })
+     .state('app.news', {
+         url: '/news',
+         views: {
+             'menuContent': {
+                 templateUrl: 'templates/news.html'
+             }
+         }
+     })
+     .state('app.settings', {
+         url: '/settings',
+         views: {
+             'menuContent': {
+                 templateUrl: 'templates/settings.html'
+             }
+         }
+     })
 
     $urlRouterProvider.otherwise('/app/login');
 });
