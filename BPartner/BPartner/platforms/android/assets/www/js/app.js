@@ -45,9 +45,11 @@ app.config(function ($stateProvider, $urlRouterProvider) {
     })
     .state('app.home', {
         url: '/home',
+        abstract: true,
         views: {
             'menuContent': {
-                templateUrl: 'templates/home.html'
+                templateUrl: 'templates/home.html',
+                controller: 'homeCtrl'
             }
         },
         redirect: 'app.home.feeds'
@@ -113,9 +115,9 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         //    $state.go('app.login');
         //}
         //else
-            if (toState.redirectTo) {
-                event.preventDefault();
-                $state.go(toState.redirect, toParams)
-            }
+        if (toState.redirectTo) {
+            event.preventDefault();
+            $state.go(toState.redirect, toParams)
+        }
     });
 }]);

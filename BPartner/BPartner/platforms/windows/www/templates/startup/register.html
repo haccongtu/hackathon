@@ -1,1 +1,29 @@
 ﻿
+<ion-view view-title="Ionic Components+">
+    <ion-content>
+        <form ng-submit="register()">
+            <div class="list">
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Email</span>
+                    <input type="email" placeholder="Email" ng-model="user.email" required>
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Họ và tên</span>
+                    <input type="text" placeholder="Họ và tên" ng-model="user.name" required>
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Mật khẩu</span>
+                    <input type="password" placeholder="Mật khẩu" required>
+                </label>
+            </div>
+            <div class="row">
+                <button class="col button button-stable  button-small" ui-sref="app.login">
+                    Đăng nhập
+                </button>
+                <button class="col button button-positive  button-small" type="submit">
+                    Đăng ký
+                </button>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>

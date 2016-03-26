@@ -1,8 +1,17 @@
-﻿
-<ion-view view-title="Ionic Components+">
-    <ion-content>
-        <div class="bar bar-subheader bar-stable static text-center">
-            <strong class="title">Trang chính</strong>
-        </div>
-    </ion-content>
-</ion-view>
+﻿<div class="tabs-striped tabs-background-balanced tabs-color-light">
+    <div class="tabs tabs-icon-top">
+        <a class="tab-item" ng-class="{'active':state=='app.home.feeds'}" ng-click="go('app.home.feeds')">
+            <i class="icon ion-ios-navigate-outline"></i>
+            Feeds
+        </a>
+        <a class="tab-item"  ng-class="{'active':state=='app.home.messages'}" ng-click="go('app.home.messages')">
+            <i class="icon ion-ios-chatboxes-outline"></i>
+            Messages
+        </a>
+        <a class="tab-item"  ng-class="{'active':state=='app.home.friends'}"  ng-click="go('app.home.friends')">
+            <i class="icon ion-ios-person-outline"></i>
+            Friends
+        </a>
+    </div>
+</div>
+<ion-nav-view name="homeContent"></ion-nav-view>

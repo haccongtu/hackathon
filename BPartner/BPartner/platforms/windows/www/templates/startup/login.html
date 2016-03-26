@@ -1,1 +1,25 @@
 ﻿
+<ion-view view-title="Ionic Components+">
+    <ion-content>
+        <form ng-submit="login()">
+            <div class="list">
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Email</span>
+                    <input type="email" placeholder="Email" ng-model="user.email" required>
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Mật khẩu</span>
+                    <input type="password" placeholder="Mật khẩu">
+                </label>
+            </div>
+            <div class="row">
+                <button class="col button button-positive  button-small" type="submit">
+                    Đăng nhập
+                </button>
+                <button class="col button button-stable  button-small" ui-sref="app.signup">
+                    Đăng ký
+                </button>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>
