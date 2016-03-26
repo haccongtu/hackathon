@@ -1,4 +1,4 @@
-﻿module.exports = function(angularApp) {
+module.exports = function(angularApp) {
     angularApp.factory('ionicMaterialMotion', Motion);
 
     function Motion() {
