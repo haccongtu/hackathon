@@ -1,4 +1,4 @@
-var app = angular.module('bpartner', ['ionic', 'ionic-material']);
+﻿var app = angular.module('bpartner', ['ionic', 'ionic-material']);
 
 app.run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
@@ -21,19 +21,11 @@ app.config(function ($stateProvider, $urlRouterProvider) {
      })
     .state('app.login', {
         url: '/login',
-        views: {
-            'menuContent': {
-                templateUrl: 'templates/startup/login.html'
-            }
-        }
+        templateUrl: 'templates/startup/login.html'
     })
     .state('app.signup', {
         url: '/register',
-        views: {
-            'menuContent': {
-                templateUrl: 'templates/startup/register.html'
-            }
-        }
+        templateUrl: 'templates/startup/register.html'
     })
     .state('app.home', {
         url: '/home',
