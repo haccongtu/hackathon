@@ -63,6 +63,15 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             }
         }
     })
+        .state('app.home.newfeed', {
+            url: '/newfeed',
+            views: {
+                'homeContent': {
+                    templateUrl: 'templates/newfeed.html',
+                    controller: 'newfeedCtrl'
+                }
+            }
+        })
     .state('app.home.messages', {
         url: '/messages',
         views: {
