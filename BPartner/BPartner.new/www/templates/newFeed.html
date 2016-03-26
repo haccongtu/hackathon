@@ -1,46 +1,36 @@
-﻿<ion-content>
+﻿<ion-view view-title="Đăng bài mới">
+
+    <ion-content>
+
         <div class="row">
-          <div class="col">
-            <img src="http://pik.vn/20152aebbf0d-aea7-457d-8af4-7699a082426a.jpeg" width="50px" >
-          </div>
-          <div class="col col-90"><label class="item item-input">
-            <textarea placeholder="Cùng chia sẽ nào!"></textarea>
-          </label></div>
-        </div>
-          <div class="item item-divider">
-            Chọn vị trí bắt đầu và đích đến.
-          </div>
-
-          <ng-map center="[40.74, -74.18]"></ng-map>
-          
-
-            <div class="row">
-            <div class="col col-90">
-              <a href="#" class="item item-icon-left">
-                <i class="ion-flag"></i>
-                Điểm bắt đầu lộ trình
-              </a>
-              </div>
             <div class="col">
-              <button class="button icon ion-ios-reload button-positive"></button>
+                <img src="http://pik.vn/20152aebbf0d-aea7-457d-8af4-7699a082426a.jpeg" width="50px">
             </div>
-          </div>
-          <div class="row">
-            <div class="col col-90">
-              <a href="#" class="item item-icon-left">
-              <i class="ion-pinpoint"></i>
-              Điểm kết thúc lộ trình
-             </a>
-              </div>
-            <div class="col">
-            <button class="button icon ion-ios-reload button-positive"></button>
-            
+            <div class="col-90">
+                <div class="list list-inset">
+                    <label class="item item-input">
+                        <textarea placeholder="Cùng chia sẻ nào!"></textarea>
+                    </label>
+                </div>
             </div>
-          </div>
-          <div class="item item-divider">
-            Chọn lịch biểu.
-          </div>
-          <button class="button button-full button-balanced">Đăng</button>
         </div>
 
-     <ion-content>
+        <div class="list list-inset">
+            <label class="item item-input">
+                <i class="icon ion-android-locate placeholder-icon"></i>
+                <input type="text" placeholder="Điểm xuất phát">
+            </label>
+        </div>
+        
+        <div class="list list-inset">
+            <label class="item item-input">
+                <i class="icon ion-android-pin placeholder-icon"></i>
+                <input type="text" placeholder="Điểm đến">
+            </label>
+        </div>
+
+        <button class="button button-full button-small button-balanced">Đăng</button>
+
+    </ion-content>
+
+</ion-view>
