@@ -1,7 +1,5 @@
 ﻿<ion-view view-title="Thông tin mới">
-    
     <ion-content style="overflow: hidden">
-
         <div class="row">
             <div class="col">
                 <button class="button button-full button-icon icon ion-compose button-small" ui-sref="app.newfeed"> Đăng bài</button>
@@ -17,6 +15,8 @@
                     <div class="item item-avatar">
                         <img src="img/avatar/{{status.sender.avatar}}.jpg">
                         <h2>{{status.sender.name}}</h2>
+                        <p style="width: 95%;word-wrap:break-word">Từ:<strong>{{status.start.address}}</strong></p>
+                        <p style="width: 95%;word-wrap:break-word">Đến:<strong>{{status.end.address}}</strong></p>
                         <p>{{status.time}}</p>
                     </div>
                     <div class="item item-body" style="margin-top: -40px">
