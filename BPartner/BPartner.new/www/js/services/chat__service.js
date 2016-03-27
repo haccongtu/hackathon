@@ -15,6 +15,7 @@
         function getConversation(user1, user2) {
             var user1ConversationsRef = new Firebase(fire + 'profiles/' + user1 + '/conversations');
             var user2ConversationsRef = new Firebase(fire + 'profiles/' + user2 + '/conversations');
+
             var conversation = null;
             user1ConversationsRef.once("value", function (user1Conversations) {
                 user2ConversationsRef.once("value", function (user2Conversations) {

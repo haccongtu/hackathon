@@ -5,15 +5,17 @@
         .module('services')
         .service('ChatService', ChatService);
 
-    ChatService.$inject = ['$rootScope', '$state'];
+    ChatService.$inject = ['$rootScope', '$state', 'AuthService'];
 
-    function ChatService($rootScope, $state) {
+    function ChatService($rootScope, $state, AuthService) {
+
+        var user1ConversationsRef = new Firebase(fire + 'profiles/' + AuthService.id + '/conversations');
+
         var service = {};
 
         service.getConversation = getConversation;
 
         function getConversation(user1, user2) {
-            var user1ConversationsRef = new Firebase(fire + 'profiles/' + user1 + '/conversations');
             var user2ConversationsRef = new Firebase(fire + 'profiles/' + user2 + '/conversations');
             var conversation = null;
             user1ConversationsRef.once("value", function (user1Conversations) {
@@ -22,7 +24,7 @@
                         user2Conversations.forEach(function (u2C) {
                             if (u1C.val().value == u2C.val().value) {
                                 conversation = new Firebase(fire + 'conversations/' + u1C.val().value);
-                                                            }
+                            }
                         });
                     });
                 });
