@@ -3,33 +3,17 @@
     angular.module('controllers')
     .controller('feedCtrl', feedCtrl);
 
-    feedCtrl.$inject = ['$scope', 'FeedService'];
+    feedCtrl.$inject = ['$scope', '$firebaseArray', '$state', 'StatusService', 'AuthService', 'ChatService'];
 
-    function feedCtrl($scope, FeedService) {
-        var feeds = [];
-        feeds = FeedService.feeds;
-        var ind = 0;
-        $scope.buffer = angular.copy(feeds);
-        $scope.cachedFeeds = feeds.slice(0, 10);
+    function feedCtrl($scope, $firebaseArray, $state, StatusService, AuthService, ChatService) {
+        var statuses = $firebaseArray(StatusService.getStatus());
+        $scope.statuses = statuses;
 
-        $scope.$watch('buffer', function () {
-            console.log('data changed');
-            ind = 0;
-            $scope.cachedFeeds = $scope.buffer.slice(0, 10);
-        })
-        $scope.loadMore = function () {
-            ind = ind + 10
-            var r = 10
-            if (ind + 10 >= $scope.buffer.length) {
-                r = $scope.buffer.length - ind
-            }
-            $scope.cachedFeeds = $scope.cachedFeeds.concat($scope.buffer.slice(ind, r + ind))
-        }
-        $scope.press = function (item) {
-            $scope.selectedItem = item
-            console.log(item.name)
-
-        }
+        $scope.detail = function (status) {
+            console.log(AuthService.id);
+            if (AuthService.id !== status.sender.uid)
+                $state.go('app.conversation', { user1: AuthService.id, user2: status.sender.uid });
+        };
     }
 
 

@@ -35,4 +35,5 @@
     <preference name="InAppBrowserStorageEnabled" value="True" />
     <preference name="SuppressesIncrementalRendering" value="True" />
     <preference name="windows-target-version" value="10.0" />
+    <preference name="AndroidLaunchMode" value="standard" />
 </widget>

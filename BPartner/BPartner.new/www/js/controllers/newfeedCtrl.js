@@ -3,14 +3,18 @@
     angular.module('controllers')
     .controller('newFeedCtrl', newFeedCtrl);
 
-    newFeedCtrl.$inject = ['$scope', '$state', 'FeedService', '$ionicLoading', 'StatusService'];
+    newFeedCtrl.$inject = ['$scope', '$state', 'AuthService', '$ionicLoading', 'StatusService'];
 
-    function newFeedCtrl($scope, $state, FeedService, $ionicLoading, StatusService) {
+    function newFeedCtrl($scope, $state, AuthService, $ionicLoading, StatusService) {
 
         var model = {
+            sender: {
+                uid: AuthService.id,
+                name: AuthService.user.name,
+                avatar: AuthService.user.avatar,
+            },
             content: '',
-            time: new Date(),
-            time2: null,
+            time: (new Date()).getTime(),
             start: {
                 latLng: null,
                 address: '',
