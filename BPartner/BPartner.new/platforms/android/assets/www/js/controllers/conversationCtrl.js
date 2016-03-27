@@ -20,7 +20,8 @@
             ele.scrollTop = ele.scrollHeight;
         }
         function addMessage() {
-            conversation.push({ user: AuthService.user, time: (new Date()).getTime(), text: $scope.data.msg });
+            var d = new Date();
+            conversation.push({ user: AuthService.user, time: d.getFullYear() + "-" + ('0' + (d.getMonth() + 1)).slice(-2) + "-" + ('0' + d.getDate()).slice(-2) + " " + ('0' + d.getHours()).slice(-2) + ":" + ('0' + d.getMinutes()).slice(-2) + ":" + ('0' + d.getSeconds()).slice(-2), text: $scope.data.msg });
             $scope.data.msg = '';
         }
     }

@@ -7,6 +7,7 @@
 
     function newFeedCtrl($scope, $state, AuthService, $ionicLoading, StatusService) {
 
+        var d = new Date();
         var model = {
             sender: {
                 uid: AuthService.id,
@@ -14,7 +15,7 @@
                 avatar: AuthService.user.avatar,
             },
             content: '',
-            time: (new Date()).getTime(),
+            time: d.getFullYear() + "-" + ('0' + (d.getMonth() + 1)).slice(-2) + "-" + ('0' + d.getDate()).slice(-2) + " " + ('0' + d.getHours()).slice(-2) + ":" + ('0' + d.getMinutes()).slice(-2) + ":" + ('0' + d.getSeconds()).slice(-2),
             start: {
                 latLng: null,
                 address: '',
@@ -54,7 +55,8 @@
                     } else {
                         model.start.address = '';
                         model.start.place_id = '';
-                    }
+                    }                   
+                    $scope.$apply();
                 });
             }
             else {
@@ -68,9 +70,9 @@
                         model.end.address = '';
                         model.end.place_id = '';
                     }
+                    $scope.$apply();
                 });
             }
-            $scope.$apply();
         });
 
         $scope.focus = 1;
@@ -81,7 +83,6 @@
             StatusService.addStatus(model);
             console.log(model);
             $state.go('app.home.feeds');
-
         };
         $scope.hfocus = function (f) {
             $scope.focus = f;
